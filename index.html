@@ -81,6 +81,7 @@
     color: var(--amber); font-size: 15px; cursor: pointer; line-height: 1;
   }
   .moon.left { right: 44px; }
+  .moon.wt { right: 88px; font-family: Georgia, serif; font-style: italic; font-size: 12px; }
   .menu { display: flex; justify-content: center; gap: 26px; padding: 12px 0; }
   .menu a {
     font-size: 10.5px; letter-spacing: .26em; text-transform: uppercase;
@@ -283,7 +284,7 @@
       hangboard: true,
       main: [
         { name: 'Hangboard — half-crimp repeaters', target: '3 sets of 6 × (7s on / 3s off) · rest 3 min · RPE 6–7', notes: '20mm edge, submax. While fresh, before bouldering.' },
-        { name: 'Hangboard — open-hand repeaters', target: '3 sets of 6 × (7s on / 3s off) · rest 3 min · RPE 6–7', notes: 'After 4 consistent weeks: progress to 10s max-effort hangs with backpack weight.' },
+        { name: 'Hangboard — open-hand repeaters', target: '3 sets of 6 × (7s on / 3s off) · rest 3 min · RPE 6–7', notes: 'After 4 consistent weeks: progress to 10s max-effort hangs with backpack weight.', bw: { notes: 'After 4 consistent weeks: progress via a smaller edge or one-arm-assisted hangs rather than added weight.' } },
         { name: 'Limit bouldering', target: '3–5 problems at your limit · 1–3 attempts each · full rest', notes: 'Quality over volume.' }
       ],
       finisher: [
@@ -332,9 +333,9 @@
       ],
       main: [
         { name: 'Pull-ups', target: '3 × 4 · RPE 6–7' },
-        { name: 'Push-ups', target: '3 × 10–15 · RPE 7', notes: 'Backpack when 3 × 15 is easy.' },
-        { name: 'Inverted rows (low bar/table) or one-arm backpack row', target: '3 × 8/side · RPE 7' },
-        { name: 'Single-leg RDL, backpack-loaded', target: '3 × 6/side · RPE 7' },
+        { name: 'Push-ups', target: '3 × 10–15 · RPE 7', notes: 'Backpack when 3 × 15 is easy.', bw: { notes: 'Band across the upper back when 3 × 15 is easy — a band is superb push-up resistance.' } },
+        { name: 'Inverted rows (low bar/table) or one-arm backpack row', target: '3 × 8/side · RPE 7', bw: { name: 'Inverted rows (low bar/table)', target: '3 × 8–12 · RPE 7', notes: 'Progress by elevating the feet, slowing the eccentric, or a towel-offset one-arm bias.' } },
+        { name: 'Single-leg RDL, backpack-loaded', target: '3 × 6/side · RPE 7', bw: { name: 'Single-leg RDL, band-loaded', target: '3 × 6/side · RPE 7', notes: 'Stand on the band, hold the ends. 3s lowering — balance is half the exercise.' } },
         { name: 'Slider/towel hamstring curls', target: '2 × 8 · RPE 7', notes: 'Hamstrings stay — loaded, not stretched, while symptomatic.' },
         { name: 'Side plank', target: '2 × 30s/side · RPE 6' },
         { name: 'Prone Y-T-W or light-object external rotations', target: '2 × 10 · RPE 5' }
@@ -369,7 +370,7 @@
       gripDek: 'A hotel towel over the bar — the road hangboard. Submax repeaters, three sets per variation: towel grip first, bare-bar open hand after. RPE 6–7.',
       main: [
         { name: 'Grip — towel hang repeaters', target: '3 sets of 6 × (7s on / 3s off) · rest 3 min · RPE 6–7', notes: 'Towel over the bar, one end in each hand. The closest road stand-in for the hangboard — brutal on the forearms, kind on the finger pulleys.' },
-        { name: 'Grip — weighted bar hang', target: '2 × 20–30s · loaded backpack · rest 2 min', notes: 'Open-hand strength. Skip if the towel work already cooked the forearms.' },
+        { name: 'Grip — weighted bar hang', target: '2 × 20–30s · loaded backpack · rest 2 min', notes: 'Open-hand strength. Skip if the towel work already cooked the forearms.', bw: { name: 'Grip — uneven towel hang', target: '2 × 15–25s per side-bias · rest 2 min', notes: 'One hand on the towel, one on the bar; shift weight toward the bar hand. Heavier grip without a single kilo. Skip if the repeaters already cooked the forearms.' } },
         { name: 'Asymmetric pulling — climb the ladder', target: '4 × 3–5/side · rest 2–3 min · RPE 8', notes: 'The limit-boulder stand-in: asymmetric, near-maximal pulling like a hard reach on the wall. Ladder: ① archer rows on a low bar, feet down → ② uneven pull-ups, one hand on a towel slung from the bar → ③ archer pull-ups → ④ typewriters. At 5×5 strict, start at ① or ② — move up one rung only when every set is crisp at RPE 8. Never grinding.' },
         { name: 'Body tension — front-lever ladder', target: '3 × 8–12s hold, or 3 × 5 rows · rest 2 min · RPE 7–8', notes: 'Body tension is climbing tension. Ladder: ① tuck front-lever hold → ② tuck front-lever rows → ③ advanced tuck (hips open a little). Start at the hold: knees pulled in, hips level with shoulders, hollow — no arching. Rows come later; they’re a pull-up-and-a-half in disguise.' },
         { name: 'Hanging knee raises', target: '3 × 8 · rest 90s · RPE 7', notes: 'Knees bent while symptomatic — straight legs under a chin-down hang load the nerve like a slump. Toes-to-bar only once the leg is clear.' }
@@ -391,7 +392,7 @@
       options: [
         { name: 'Volume circuit', detail: '4–5 rounds: 6 pull-ups · 8 dips · 8 low-bar rows · 10 push-ups. 2 min between rounds, RPE ceiling 7.' },
         { name: 'Skill day', detail: 'Straight-bar support holds, arch-to-hollow swings, band-assisted MU technique reps, tuck L-sits.' },
-        { name: 'Legs & carries', detail: 'Bulgarian split squats off a bench 3 × 8/side · step-ups 3 × 8/side · heavy backpack carries. The road slot for leg strength.' }
+        { name: 'Legs & carries', detail: 'Bulgarian split squats off a bench 3 × 8/side · step-ups 3 × 8/side · heavy backpack carries. The road slot for leg strength.', bw: { name: 'Legs', detail: 'Bulgarian split squats off a bench 3 × 8/side · step-ups 3 × 8/side · jump squats 3 × 5, soft landings. The road slot for leg strength.' } }
       ],
       main: [
         { name: 'Pick this week’s focus', target: 'circuit / skill / legs — rotate weekly' },
@@ -400,6 +401,18 @@
       rules: 'Bent knees on hanging core work · RPE ceiling of 7 everywhere — a volume day, not a test.'
     }
   };
+
+  function getWeights() { return load('wt', 'bw'); }
+  function setWeightsStore(v) { save('wt', v); }
+  function rit(it) {
+    if (getWeights() === 'bw' && it.bw) {
+      var m = {}, k;
+      for (k in it) m[k] = it[k];
+      for (k in it.bw) m[k] = it.bw[k];
+      return m;
+    }
+    return it;
+  }
 
   function getMode() { return load('loc', 'climb'); }
   function setModeStore(m) { save('loc', m); }
@@ -410,11 +423,11 @@
       label: 'Movement the First — Strength & Power Base',
       items: [
         { name: 'Explosive pull-ups', target: '4 × 3 · rest 2–3 min · fast, crisp', notes: 'First, while fresh. Pull as high and fast as possible, aim chest. Height over reps — the MU is a power move.' },
-        { name: 'Strict pull-ups', target: '4 × 4–6 · rest 2–3 min · RPE 8', notes: 'When 4 × 6 is clean: add load via backpack. A €25 dip belt is the single best purchase for this goal.' },
-        { name: 'Dips, full range', target: '4 × 6–8 · rest 2 min · RPE 7–8', notes: 'Shoulder below elbow at bottom. Add backpack load after 8 clean.' },
+        { name: 'Strict pull-ups', target: '4 × 4–6 · rest 2–3 min · RPE 8', notes: 'When 4 × 6 is clean: add load via backpack. A €25 dip belt is the single best purchase for this goal.', bw: { notes: 'No weights needed: progress by tempo and position — 3s lowering, 1s chest-high pause, then a chest-to-bar bias. When 4 × 6 is crisp, shift sets toward uneven pull-ups (towel offset).' } },
+        { name: 'Dips, full range', target: '4 × 6–8 · rest 2 min · RPE 7–8', notes: 'Shoulder below elbow at bottom. Add backpack load after 8 clean.', bw: { notes: 'Shoulder below elbow at bottom. Progress without load: 3s eccentric, then a 1s dead-stop at the bottom, then straight-bar dips.' } },
         { name: 'Straight-bar support hold', target: '3 × 10–15s · rest 90s · RPE 7', notes: 'Top of bar, arms locked, hips at bar. Trains the MU finish position.' },
         { name: 'Pseudo-planche push-ups', target: '3 × 6–8 · rest 90s · RPE 7', notes: 'Pressing strength for the transition.' },
-        { name: 'Arch-to-hollow swings on bar', target: '3 × 6 · rest 60s · RPE 5', notes: 'Learn the swing that powers a bar MU. Small and controlled.' }
+        { name: 'Arch-to-hollow swings on bar', target: '3 × 6 · rest 60s · RPE 5', notes: 'Not momentum training — positional control. Actively switching arch ↔ hollow under the bar teaches the body path that gets your wrists over at the top of the pull; the five exercises above carry all the strength work, strictly. Small and controlled.' }
       ],
       exit: [
         { id: 'b1-pu', label: '9 strict pull-ups' },
@@ -427,7 +440,7 @@
       label: 'Movement the Second — High Pull & Chest-to-Bar',
       items: [
         { name: 'Explosive high pulls', target: '4 × 3 · rest 2–3 min · RPE 8', notes: 'Bar to sternum, 1s hold at top.' },
-        { name: 'Weighted pull-ups (backpack/belt)', target: '4 × 4 · rest 2–3 min · RPE 8' },
+        { name: 'Weighted pull-ups (backpack/belt)', target: '4 × 4 · rest 2–3 min · RPE 8', bw: { name: 'Uneven pull-ups (towel offset)', target: '4 × 3–4/side · rest 2–3 min · RPE 8', notes: 'The bodyweight stand-in for added load — the lower the towel hand, the heavier the bar hand. Band-resisted pull-ups also work where a low anchor exists.' } },
         { name: 'Chest-to-bar pull-ups', target: '3 × 3–5 · rest 2 min · RPE 8' },
         { name: 'Straight-bar dips', target: '3 × 5–8 · rest 2 min · RPE 7–8' },
         { name: 'Dip-station Russian dip motion', target: '3 × 4 · rest 2 min · RPE 7–8' },
@@ -444,7 +457,7 @@
       items: [
         { name: 'Bar MU negatives', target: '4–5 singles · rest 3 min', notes: 'Jump to top, lower through the transition in 5–8s. Attempts FIRST, fully rested, never grinding.' },
         { name: 'Jumping bar MUs (low bar)', target: 'a few quality singles · rest 3 min', notes: 'Any low bar works — gym or park. You travel with a band: band-assisted bar MUs are the best bridge to the first strict rep, wherever you are.' },
-        { name: 'Weighted pull-ups (maintenance)', target: '3 × 3 · rest 2–3 min · RPE 8' },
+        { name: 'Weighted pull-ups (maintenance)', target: '3 × 3 · rest 2–3 min · RPE 8', bw: { name: 'Chest-to-bar pull-ups, 1s pause (maintenance)', target: '3 × 3 · rest 2–3 min · RPE 8' } },
         { name: 'Dips (maintenance)', target: '3 × 6 · rest 2 min · RPE 7' }
       ],
       exit: [
@@ -703,6 +716,7 @@
     var h = '<div class="mast">' +
       '<button class="moon" onclick="app.toggleTheme()">' + (dark ? '☀' : '☾') + '</button>' +
       '<button class="moon left" title="climbing gym / calisthenics park" onclick="app.toggleLoc()">' + (getMode() === 'park' ? '⛰' : 'Π') + '</button>' +
+      '<button class="moon wt" title="extra weights / bodyweight only" onclick="app.toggleWt()">' + (getWeights() === 'bw' ? 'bw' : 'kg') + '</button>' +
       '<h1 class="word" onclick="app.go(\'home\')">Asc<span>e</span>nt</h1>' +
       '<div class="motto">A Bar Muscle-Up Campaign · Vol. III' + (getMode() === 'park' ? ' · On the Road' : '') + '</div>' +
       '<div class="rule"></div><div class="rule thin"></div>' +
@@ -833,7 +847,7 @@
     for (var i = 0; i < items.length; i++) {
       var id = key + '-' + prefix + i;
       var done = !!w.checks[id];
-      var it = items[i];
+      var it = rit(items[i]);
       h += '<div class="li' + (done ? ' done' : '') + '" onclick="app.toggleCheck(\'' + id + '\')">' +
         '<span class="n">' + (i + 1) + '</span><div class="w">' +
         '<div class="t">' + it.name + '</div>' +
@@ -904,7 +918,7 @@
     if (s.options) {
       h += chap('ii.', 'This week’s focus', 'Rotate weekly.');
       h += '<div class="creed">';
-      s.options.forEach(function (o) { h += '<p><b>' + o.name + ':</b> ' + o.detail + '</p>'; });
+      s.options.forEach(function (o) { o = rit(o); h += '<p><b>' + o.name + ':</b> ' + o.detail + '</p>'; });
       h += '</div>';
     }
 
@@ -1018,6 +1032,7 @@
     h += '<div class="creed">' +
       '<p>A <b>€25 dip belt</b> — the single best purchase for this goal (loading pull-ups and dips).</p>' +
       '<p>A <b>€15 medium resistance band</b> — the best bridge from Movement Ⅱ to the first strict rep.</p>' +
+      '<p>Until the belt arrives: the <b>bw</b> toggle in the masthead swaps every loaded exercise for a band or leverage progression — nothing in this plan requires a single kilo of iron.</p>' +
       '</div>';
 
     h += chap('¶ struck from volume ii', 'And why');
@@ -1078,6 +1093,11 @@
       stopHangTimer();
       render();
       window.scrollTo(0, 0);
+    },
+
+    toggleWt: function () {
+      setWeightsStore(getWeights() === 'bw' ? 'kg' : 'bw');
+      render();
     },
 
     peek: function (id) { openCue = openCue === id ? null : id; render(); },
